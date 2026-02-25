@@ -1,0 +1,6 @@
+name: lab04-infra
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Lab 04 — AWS EC2 instance with networking (Pulumi equivalent of Terraform setup)
