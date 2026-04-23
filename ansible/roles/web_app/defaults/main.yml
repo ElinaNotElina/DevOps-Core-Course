@@ -1,0 +1,18 @@
+---
+# Application configuration
+web_app_name: devops-app
+web_app_docker_image: "elinanotelina/devops-info-service"
+web_app_docker_tag: latest
+web_app_port: 5000
+web_app_internal_port: 5000
+
+# Docker Compose configuration
+web_app_compose_dir: "/opt/{{ web_app_name }}"
+
+# Application environment variables
+web_app_env: {}
+
+# Wipe logic control — default: do not wipe
+# Wipe only:     ansible-playbook deploy.yml -e "web_app_wipe=true" --tags web_app_wipe
+# Clean install:  ansible-playbook deploy.yml -e "web_app_wipe=true"
+web_app_wipe: false
