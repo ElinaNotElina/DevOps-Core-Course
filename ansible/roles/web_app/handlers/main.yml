@@ -1,0 +1,6 @@
+---
+- name: Restart app container
+  ansible.builtin.command:
+    cmd: docker compose -f {{ web_app_compose_dir }}/docker-compose.yml restart
+  become: true
+  changed_when: true
